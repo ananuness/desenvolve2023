@@ -1,0 +1,39 @@
+.cardGroup__card:hover .fa-instagram,
+.cardGroup__card:hover .fa-twitter,
+.cardGroup__card:hover .fa-whatsapp {
+  color: var(--gray-50);
+}
+
+.cardGroup__card:hover .fa-instagram {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), 
+  radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), 
+  radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), 
+  radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), 
+  radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), 
+  radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), 
+  radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), 
+  linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.cardGroup__card:hover .fa-twitter {
+  background-color: #00acee;
+}
+
+.cardGroup__card:hover .fa-whatsapp {
+  background-color: #25d366;
+}
+
+.cardGroup__card:nth-child(1):hover .card__descriptionText,
+.cardGroup__card:nth-child(1):hover .card__price {
+  color: #d9317a;
+}
+
+.cardGroup__card:nth-child(2):hover .card__descriptionText,
+.cardGroup__card:nth-child(2):hover .card__price {
+  color: #00acee;
+}
+
+.cardGroup__card:nth-child(3):hover .card__descriptionText,
+.cardGroup__card:nth-child(3):hover .card__price {
+  color:#25d366;
+}
