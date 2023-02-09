@@ -23,5 +23,5 @@ Então a partir do html que vou enviar para vocês, vocês salvarão ele em um a
   <img src="./assets/my-layout.png" alt="layout que desenvolvi">
 </div>
 
-<h3>Hover:</h3>
+<span>Hover:</span>
 <img src="./assets/layout-hover.png" alt="layout requerido com hover">
