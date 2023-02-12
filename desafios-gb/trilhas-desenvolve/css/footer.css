@@ -1,0 +1,50 @@
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--white-color);
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+}
+
+.gb-logo {
+  margin-right: 1.5rem;
+}
+
+.footer-links {
+  min-width: 319px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.desenvolve-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media {
+  text-align: center;
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .875rem;
+}

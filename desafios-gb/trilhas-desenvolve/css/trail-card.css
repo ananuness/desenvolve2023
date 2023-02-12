@@ -1,0 +1,64 @@
+.trails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.trail-card {
+  min-width: 400px;
+  min-height: 445px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 4px;
+  background-color: var(--wild-sand-color);
+}
+
+.card-title {
+  margin-bottom: 1.5rem;
+  line-height: 31px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--san-juan-color);
+}
+
+.card-description {
+  max-width: 328px;
+  line-height: 20.8px;
+}
+
+/* 
+  explicando: seleciona todos os elementos com a classe 
+  .card-description, menos o elemento de mesma classe e 
+  que seja o penúltimo filho de um elemento pai. Porém 
+  se o penúltimo filho não for mais dessa classe, o estilo 
+  não funcionará mais.
+*/
+.card-description:not(:nth-last-child(2)) {
+  margin-bottom: 1.25rem;
+}
+
+.card-link-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.card-link, .card-link:visited {
+  color: var(--cornflower-color);
+}
+
+.card-link {
+  align-self: self-end;
+  display: inline-block;
+  padding: .875rem 1.125rem;
+  border: 1px solid var(--cornflower-color);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all .5s ease;
+}
+
+.card-link:hover {
+  color: var(--white-color);
+  background-color: var(--cornflower-color);
+}

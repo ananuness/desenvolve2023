@@ -1,0 +1,40 @@
+:root {
+  --white-color: #FFFFFF;
+  --wild-sand-color: #F5F5F5;
+  --carnation-color: #FF97D3;
+  --cerise-color: #DB1E8C;
+  --flirt-color: #B2006A;
+  --cornflower-color: #264FEC;
+  --cobalt-color: #0000EE;
+  --san-juan-color: #364372;
+  --pickled-bluewood-color: #33475B;
+  --black-color: #000000;
+
+  --font-text: 'IBM Plex Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: var(--san-juan-color);
+  background-color: var(--carnation-color)
+}
+
+:visited {
+  color: var(--cerise-color);
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-text);
+  background-color: var(--pickled-bluewood-color);
+}
+
+main {
+  max-width: 1280px;
+  margin: 2.5rem auto 9rem;
+}
