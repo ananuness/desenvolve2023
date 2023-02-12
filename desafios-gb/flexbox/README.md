@@ -12,13 +12,13 @@ Então a partir do html que vou enviar para vocês, vocês salvarão ele em um a
 **Bônus:** quem quiser criar uma versão mobile e ainda colocar efeitos de hover (quando passa o mouse em cima) iremos adorar ❤️
 
 ## Layout Requerido
----
+
 <div style="padding: 10px 0;">
   <img src="./assets/layout.png" alt="layout requerido">
 </div>
 
-### Layout desenvolvido
----
+### Layout desenvolvido:
+
 <div style="padding: 10px 0;">
   <img src="./assets/my-layout.png" alt="layout que desenvolvi">
 </div>
