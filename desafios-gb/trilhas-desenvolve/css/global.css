@@ -28,13 +28,17 @@
   color: var(--cerise-color);
 }
 
-body {
+.body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-text);
   background-color: var(--pickled-bluewood-color);
 }
 
-main {
+.main {
   max-width: 1280px;
+  display: flex;
+  align-items: flex-start;
   margin: 2.5rem auto 9rem;
 }

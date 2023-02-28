@@ -1,17 +1,17 @@
-header {
-  max-height: 80px;
+.header {
   display: flex;
-  padding: 1.25rem;
   background-color: var(--white-color);
 }
 
 .header-container {
   width: 100%;
   max-width: 1280px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 auto;
 }
 
 .header-title {
@@ -52,4 +52,26 @@ header {
 .search-input:focus-visible {
   outline: none;
   border: 2px solid var(--flirt-color);
+}
+
+@media screen and (min-width: 320px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .input-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 562px) {
+  .header {
+    padding: 1.5rem;
+  }
+  
+  .input-container {
+    width: fit-content;
+  }
 }

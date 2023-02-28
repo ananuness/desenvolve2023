@@ -32,8 +32,7 @@
   explicando: seleciona todos os elementos com a classe 
   .card-description, menos o elemento de mesma classe e 
   que seja o penúltimo filho de um elemento pai. Porém 
-  se o penúltimo filho não for mais dessa classe, o estilo 
-  não funcionará mais.
+  se o penúltimo filho não for mais dessa classe, o estilo não funcionará mais.
 */
 .card-description:not(:nth-last-child(2)) {
   margin-bottom: 1.25rem;
@@ -42,6 +41,7 @@
 .card-link-container {
   display: flex;
   flex-grow: 1;
+  margin-top: 1rem;
 }
 
 .card-link, .card-link:visited {
@@ -61,4 +61,14 @@
 .card-link:hover {
   color: var(--white-color);
   background-color: var(--cornflower-color);
+}
+
+@media screen and (max-width: 432px) {
+  .trails {
+    margin: 0 1rem;
+  }
+
+  .trail-card {
+    min-width: calc(100% - 32px);
+  }
 }
