@@ -2,7 +2,10 @@
 
 ## O que é responsividade?
 
+É a capacidade de responder rápida e adequadamente ao que lhe é perguntado, adaptando-se as circunstancias, mas para a área de produtos digitais, podemos dizer que responsividade é uma abordagem para a criaçao de produtos digitais, na qual a experiencia é otimizada independente do dispositivo que a acessa. Ou seja, a responsividade é o que garante a adaptação do site em todas as dimensões de tela. Com isso, dois elementos importantes precisam ser levados em consideraçao na hora da construção de telas responsivas:
 
+- **‌Grids:** são elementos invisiveis que ancoram o layout e determinam os espaçamentos;
+-‌ **Breakpoints:** são momentos definidos para quebra/mudança no layout, ou seja, definem comportamento para cada situação;
 
 ## Melhores práticas para SPAs (Single Page Aplication ou Página única)
 

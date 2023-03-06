@@ -14,6 +14,7 @@
 
 ### Então, o que é Design System?
 
+É um produto que contém componentes reutilizáveis, estilos e mostra como utilizar e como aplicar cada um desses elementos. Com isso, um design system é importante para manter padrões já definidos na criação de novos elementos e produtos, mantendo a consistência visual, além de permitir maior colaboração de vários profissionais.
 Em poucas palavras, é um documento vivo com todos os componentes e propriedades de um produto ou serviço para facilitar a comunicação do time. Se diz "vivo", pois ele é passivel de sempre sofrer alterações e evoluir.
 
 Um Design System consiste em ter:
