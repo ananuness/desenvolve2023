@@ -21,7 +21,7 @@ O foco desse curso está na área de UI Designer, que é mais responsável por:
 
 **Metodologia duplo diamante:** uma das metodologias existentes utilizada para pensar em interface, mas essa simplifica bem a maneira de pensar experiências e produtos que irão resolver as dores das pessoas que utilizariam esse produto. O que fica claro nesse momento é que o UX designer, está participando de ponta a ponta nesse desenvolvimento, enquanto o UI designer tem o foco em desenvolver a aparência desse produto.
 
-<img src="../../../assets/duplo-diamante.png" alt="Metodologia do duplo diamante">
+<img src="../../../assets/double-diamond.png" alt="Metodologia do duplo diamante">
 
 Focando no segundo diamante...
 
