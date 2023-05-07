@@ -1,8 +1,8 @@
-# Consultas SQL: avançando no SQL com MySQL
+# :floppy_disk: Consultas SQL: avançando no SQL com MySQL
 
 O principal objetivo da linguagem SQL é padronizar a maneira como os registros são consultados nos bancos de dados relacionais. Atualmente, os bancos relacionais aderem ao padrão SQL, que vai além das consultas: é usado também, na criação, alteração, estruturação e manipulação do banco de dados, além da maneira como banco de dados interage com a segurança, entre outros usos.
 
-## Conteúdos
+## :notepad_spiral: Conteúdos
 
 - [Vantagens](#chat_with_upwards_trend-vantagens)
 - [Desvantagens](#chat_with_downwards_trend-desvantagens)
