@@ -2,7 +2,7 @@
 
 O principal objetivo da linguagem SQL é padronizar a maneira como os registros são consultados nos bancos de dados relacionais. Atualmente, os bancos relacionais aderem ao padrão SQL, que vai além das consultas: é usado também, na criação, alteração, estruturação e manipulação do banco de dados, além da maneira como banco de dados interage com a segurança, entre outros usos.
 
-## Conteúdos
+## Conteúdos 
 
 - [Vantagens](#chat_with_upwards_trend-vantagens)
 - [Desvantagens](#chat_with_downwards_trend-desvantagens)
@@ -281,4 +281,11 @@ Note que nem todos os comandos apresentados são suportados pelo MySQL, então v
 
 <img src="../../../assets/sql-cheat-sheet.jpg" alt="Cheat sheet do SQL">
 
-<h4 align="center">🚧 Readme em construção 👷🏻‍♀️</h4>
+<hr>
+
+<p align="center">
+  Feito com 💙 por
+  <a align="center" href="https://www.linkedin.com/in/ana-beatriz-nunes/">
+    Ana Beatriz Nunes
+  </a>
+</p>
