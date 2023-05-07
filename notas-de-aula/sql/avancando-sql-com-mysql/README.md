@@ -2,7 +2,7 @@
 
 O principal objetivo da linguagem SQL é padronizar a maneira como os registros são consultados nos bancos de dados relacionais. Atualmente, os bancos relacionais aderem ao padrão SQL, que vai além das consultas: é usado também, na criação, alteração, estruturação e manipulação do banco de dados, além da maneira como banco de dados interage com a segurança, entre outros usos.
 
-## :notepad_spiral: Conteúdos
+## Conteúdos
 
 - [Vantagens](#chat_with_upwards_trend-vantagens)
 - [Desvantagens](#chat_with_downwards_trend-desvantagens)
@@ -21,7 +21,7 @@ O principal objetivo da linguagem SQL é padronizar a maneira como os registros 
 - [Observações](#memo-observações)
 - [Cheat sheet](#toolbox-cheat-sheet)
 
-## :chat_with_upwards_trend: Vantagens
+## :chart_with_upwards_trend: Vantagens
 
 Entre as vantagens do banco de dados relacional, a primeira é que essa padronização utilizando a linguagem SQL tem um custo reduzido do **aprendizado**. Por exemplo, o profissional com conhecimento sobre o SQL da Oracle conseguirá manipular facilmente o MySQL ou SQL Server da Microsoft. Por mais que existam diferenças, principalmente na parte de funções, a adaptação do profissional não é uma questão complicada.
 
@@ -33,7 +33,7 @@ Outro benefício é a comunicação. O fato da maioria utilizar SQL permite a fa
 
 Por último temos a **liberdade de escolha**. Por existir um padrão de linguagem, se a empresa for optar pelo uso de um banco de dados relacional não ficará presa à linguagem de comunicação, por exemplo, já que são bem semelhantes. Ao tomar essa decisão, a corporação irá utilizar outros critérios de escolha, como performance, *hardware*, custo, entre outros.
 
-## :chat_with_downwards_trend: Desvantagens
+## :chart_with_downwards_trend: Desvantagens
 
 A primeira é a privação da **criatividade**. O SQL possui limitações que podem não atender às novas demandas no mercado na linguagem SQL, principalmente com o surgimento das redes sociais e dos enormes volumes de dados, o chamado *big data*. Ou seja, há uma carência nas coletas de dados que estão trafegando na internet. Para tal, estão surgindo outros bancos que usam padrões diferentes dos bancos de dados relacionais, o chamado **NoSQL**. Estes atendem de forma mais eficiente as demandas de tabelas de *big data*, como no caso das redes sociais. Lembrando que estamos nos referindo a estruturas que escapam do padrão ANSI e que, por isso, exigem um aprendizado mais específico.
 
@@ -217,7 +217,7 @@ SELECT bairro FROM clientes UNION SELECT bairro FROM vendedores;
 SELECT bairro FROM clientes UNION ALL SELECT bairro FROM vendedores;
 ```
 
-↪ Simulando *FULL JOIN* no MySQL com *UNION*
+➜ Simulando *FULL JOIN* no MySQL com *UNION*
 ```sql
 SELECT pessoas.nome, hobbies.hobby FROM pessoas
 LEFT JOIN hobbies ON pessoas.id_hobby = hobbies.id
@@ -246,7 +246,7 @@ SELECT * FROM produtos WHERE categoria IN ('bebidas', 'frios');
 SELECT * FROM produtos WHERE categoria = 'bebidas' OR categoria = 'frios';
 ```
 
-↪ Mas também, pode ser usado para fazer subconsultas, por exemplo:
+➜ Mas também, pode ser usado para fazer subconsultas, por exemplo:
 
 ```sql
 SELECT * FROM livros 
