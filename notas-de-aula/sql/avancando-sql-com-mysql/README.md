@@ -2,7 +2,26 @@
 
 O principal objetivo da linguagem SQL é padronizar a maneira como os registros são consultados nos bancos de dados relacionais. Atualmente, os bancos relacionais aderem ao padrão SQL, que vai além das consultas: é usado também, na criação, alteração, estruturação e manipulação do banco de dados, além da maneira como banco de dados interage com a segurança, entre outros usos.
 
-## Vantagens
+## Conteúdos
+
+- [Vantagens](#chat_with_upwards_trend-vantagens)
+- [Desvantagens](#chat_with_downwards_trend-desvantagens)
+- [Comandos](#clipboard-comandos)
+  - [LIKE](#like)
+  - [DISTINCT](#distinct)
+  - [LIMIT](#limit)
+  - [ORDER BY](#order-by)
+  - [GROUP BY](#group-by)
+  - [CASE](#case)
+  - [JOIN](#join)
+  - [UNION E UNION ALL](#union-e-union-all)
+  - [NOT](#not)
+  - [IN](#in)
+- [Views](#page_facing_up-views)
+- [Observações](#memo-observações)
+- [Cheat sheet](#toolbox-cheat-sheet)
+
+## :chat_with_upwards_trend: Vantagens
 
 Entre as vantagens do banco de dados relacional, a primeira é que essa padronização utilizando a linguagem SQL tem um custo reduzido do **aprendizado**. Por exemplo, o profissional com conhecimento sobre o SQL da Oracle conseguirá manipular facilmente o MySQL ou SQL Server da Microsoft. Por mais que existam diferenças, principalmente na parte de funções, a adaptação do profissional não é uma questão complicada.
 
@@ -14,13 +33,13 @@ Outro benefício é a comunicação. O fato da maioria utilizar SQL permite a fa
 
 Por último temos a **liberdade de escolha**. Por existir um padrão de linguagem, se a empresa for optar pelo uso de um banco de dados relacional não ficará presa à linguagem de comunicação, por exemplo, já que são bem semelhantes. Ao tomar essa decisão, a corporação irá utilizar outros critérios de escolha, como performance, *hardware*, custo, entre outros.
 
-## Desvantagens
+## :chat_with_downwards_trend: Desvantagens
 
 A primeira é a privação da **criatividade**. O SQL possui limitações que podem não atender às novas demandas no mercado na linguagem SQL, principalmente com o surgimento das redes sociais e dos enormes volumes de dados, o chamado *big data*. Ou seja, há uma carência nas coletas de dados que estão trafegando na internet. Para tal, estão surgindo outros bancos que usam padrões diferentes dos bancos de dados relacionais, o chamado **NoSQL**. Estes atendem de forma mais eficiente as demandas de tabelas de *big data*, como no caso das redes sociais. Lembrando que estamos nos referindo a estruturas que escapam do padrão ANSI e que, por isso, exigem um aprendizado mais específico.
 
 Outro ponto é a escassez de **estruturação** da linguagem SQL, já que ela não possui *if*, *for* e *when*, isto é, comandos condicionais como as demais linguagens de programação. Para conseguir suprir essa carência da estruturação, os bancos de dados relacionais da Oracle, SQL e MySQL criaram suas linguagens próprias internas que realizam esse conjunto de estruturação usando a linguagem SQL, mas que acaba se afastando um pouco do padrão ANSI.
 
-## Comandos
+## :clipboard: Comandos
 
 Falando um pouco sobre o padrão ANSI, este possui três grupos de comandos. O primeiro, é o **DDL** ou *Data Definition Language* (linguagem de definição de dados). Os DDLs são a parte da linguagem SQL que permite a **manipulação das estruturas do banco de dados**, como criar um banco, tabelas, índices, apagar as tabelas e alterar a política de crescimento de índice. Ou seja, os comandos que envolvem a estrutura do banco de dados relacionais são os comandos do tipo DDL.
 
@@ -236,7 +255,7 @@ IN (SELECT categorias.name FROM categorias);
 -- equivale a escrever todas as categorias existentes
 ```
 
-### Views
+## :page_facing_up: Views
 
 As views são tabelas lógicas, resultado de uma consulta que pode ser usada depois em qualquer outra query.
 
@@ -246,7 +265,7 @@ SELECT pessoas.nome, hobbies.hobby FROM pessoas
 INNER JOIN hobbies ON pessoas.id_hobby = hobbies.id;
 ```
 
-#### Observações
+## :memo: Observações
 
 Condições de filtro (*WHERE*) que possuem a chave primária ou estrangeira, significa que ela tem índice (que pode ser criado para uma coluna), como consequência, a busca será muito mais rápida do que pesquisando por outros campos. Porém, é algo perceptível quando um banco é muito grande.
 
@@ -256,7 +275,7 @@ Quando o filtro for um valor, principalmente com casas decimais, pode ser intere
 SELECT * FROM produtos WHERE preco BETWEEN 19.50 AND 19.52;
 ```
 
-## Cheat Sheets
+## :toolbox: Cheat Sheet
 
 Note que nem todos os comandos apresentados são suportados pelo MySQL, então vale a pena consultar a [documentação](https://dev.mysql.com/doc/) para conferir o que é válido.
 
