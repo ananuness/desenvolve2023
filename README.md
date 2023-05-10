@@ -17,13 +17,15 @@
 
 Categoria | Anotações |
 | ----------- | ----------- |
-| Computação | [Arquitetura de computadores: por trás de como seu programa funciona](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/arquitetura-de-computadores) |
-| Programação | [JavaScript: módulos, strict mode, prototype e POO](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript) |
+| JavaScript | [Módulos e strict mode](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript/modulos-e-strict-mode) |
+| JavaScript | [Objetos e prototype](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript/objetos-e-prototype) |
+| JavaScript | [Programação orientada à objetos e JavaScript](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript/poo-e-javascript) |
+| SQL  | [MongoDB: uma alternativa aos bancos relacionais tradicionais](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/nosql/introducao-ao-mongodb) |
+| SQL  | [Consultas SQL: avançando no SQL com MySQL](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/sql/avancando-sql-com-mysql) |
 | UI Design | [Figma: construindo o layout do site mobile](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/ui-ux-design/1-construindo-layout-mobile) |
 | UI Design | [Figma: conhecendo componentes da interface](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/ui-ux-design/2-conhecendo-componentes) |
 | UI Design | [Figma: projete sites para diversas telas](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/ui-ux-design/3-projete-para-diversas-telas) |
 | UI Design  | [Figma: trabalhando na construção de um Design System](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/ui-ux-design/4-construindo-design-system) |
-| SQL  | [Consultas SQL: avançando no SQL com MySQL](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/sql/avancando-sql-com-mysql) |
 
 
 ## :rocket: Projetos desenvolvidos
@@ -32,6 +34,7 @@ Categoria | Anotações |
 | ----------- | ----------- | ----------- |
 | UI Design | [Design Diário](https://www.figma.com/file/zg2upbaEV1TRGgJDryU65e/Design-Di%C3%A1rio?node-id=153%3A4118&t=La2c5fsB6zZbHcf0-1) | Figma |
 | Frontend | [Barbearia Alura](https://github.com/ananuness/barbearia-alura) | HTML, CSS, JS |
+| Frontend | [Step Form](https://github.com/ananuness/step-form) | HTML, CSS, JS |
 
 <h4 align="center">🚧 Readme em construção 👷🏻‍♀️</h4>
 
