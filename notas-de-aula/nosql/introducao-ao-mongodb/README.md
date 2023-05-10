@@ -84,7 +84,8 @@ o nome dessa nova *collection*:
 db.createCollection("alunos");
 ```
 
-Com a coleção criada, podemos seguir para inserir registros nela com a seguinte notação:
+Com a coleção criada, podemos seguir para inserir registros nela com a 
+seguinte notação:
 
 ```js
 db.alunos.insertOne({
@@ -223,24 +224,262 @@ db.alunos.find({
 
 ## Atualização completa e parcial de documentos
 
+Para atualizar alguma informação, usamos o `.updateOne()`.
 
+⚠️ **Cuidado**, o update do Mongo não é igual ao update do SQL, na qual
+você especifica um campo e muda para outro valor. Caso não informe ao
+update que **operação** deseja fazer, ele irá **substituir** o documento
+inteiro que está na contido no filtro, para o documento informado no
+segundo elemento. Para evitar esse comportamento, faz-se:
 
+```js
+// parâmetros: filtro, update, options
+// é necessário informar a operação $set
+db.alunos.updateMany(
+  { "curso.nome": "Sistema de informação" },
+  { $set: {
+     "curso.nome": "Sistemas de informação"
+    }
+  }
+)
+```
 
+Mais operadores interessantes além do `$set` seriam os da categoria
+_**Array Update Operators**_, um deles é o `$push`, que adiciona um
+novo valor a um array:
 
+```js
+// informando que no campo notas queremos adicionar esse novo valor
+db.alunos.updateOne(
+  { _id: ObjectId("64593e6ca3a2f50208f7606a") },
+  { $push: {
+     "notas": 8.5
+    }
+  }
+)
 
+// para adicionar vários valores
+db.alunos.updateOne(
+  { _id: ObjectId("64593e6ca3a2f50208f7606a") },
+  { $push: {
+     "notas": {
+        $each: { [8.5, 3] }
+     }
+    }
+  }
+)
+```
 
+> Para ver mais sobre esses operadores, vá até a 
+> [documentação](https://www.mongodb.com/docs/manual/reference/operator/update-array/).
 
+E levando em consideração que `.update()` foi descontinuado, podemos
+usar:
 
+- `.updateOne()` para atualizar um documento dado um filtro;
+- `.updateMany()` para atualizar vários documentos através de um filtro;
+- `.findOneAndUpdate()` para atualizar baseado em um filtro e sort;
+- `.bulkWrite()` para executar várias operações de gravação com 
+controles para ordem de execução;
+
+## Buscando e limitando registros
+
+Outras operações que podemos fazer são as de comparação, uma delas é
+o 'maior que', *mas como fazer isso no Mongo?*
+
+Lembrando que, 'maior que' em inglês é *Greater Than*, podemos fazer
+o seguinte:
+
+```js
+// informo que quero apenas os aluno que possuem notas maiores que 5
+db.alunos.find({ 
+  "notas": { $gt: 5 }
+});
+
+// retorna o primeiro documento que satisfazer a condição
+db.alunos.findOne({ 
+  "notas": { $gt: 5 }
+});
+
+// retorna apenas 3 documentos que satisfazem a condição
+db.alunos.find({ 
+  "notas": { $gt: 5 }
+}).limit(3);
+```
+
+>Note que podemos usar o `.limit()` para limitar o retorno, substituindo
+> até mesmo o `.findOne()`
+
+Outro método interessante do MongoDB é o `.sort()`, que podemos usar
+para ordenar nossa busca. Ele recebe como parâmetro um objeto JSON-like:
+
+```js
+// irá retornar os documentos em ordem alfabética
+db.alunos.find().sort({ "nome": 1 });
+
+// irá retornar os documentos na ordem inversa à alfabética
+db.alunos.find().sort({ "nome": -1 });
+```
+
+## Endereços, posicionamentos e busca por proximidade
+
+Vamos imaginar que temos em nossa faculdade cerca de 2000 alunos e que 
+todos os dias eles se deslocam até o local de estudo. Muitos acabam indo 
+sozinhos de carro, metrô, mas vivem relativamente perto. Gostaríamos de incentivar alunos que vivem ou trabalham em regiões próximas a se 
+encontrem para irem juntos a faculdade, economizando assim gasolina e 
+preservando o meio ambiente. Vamos trabalhar com a ideia de proximidade.
+
+Quando escolhemos um determinado ponto no GoogleMaps e elegemos a opção 
+dele nos mostrar estabelecimentos próximos, através do "proximidades" 
+temos, portanto, uma busca por proximidade no mapa.
+
+O que queremos fazer com um dos pontos do mapa é mostrar quais são os 
+três alunos/pontos mais próximos. Montaremos, dessa maneira, por 
+proximidade o esquema de caronas dos alunos. Poderíamos pegar cada 
+ponto do mapa por seu endereço, mas esse tipo de referência de 
+localização é difícil, pois pode ser alterada, portanto, é pouco confiável. 
+
+Então, usaremos as coordenadas de **latitude** e **longitude** que 
+permanecem no mesmo local. Na sequência pegaremos os três alunos mais 
+próximos de um outro aluno de referência.
+
+O MongoDB, entretanto, não consegue transformar o endereço que passamos 
+em latitude e longitude, quem faz isso é uma API de terceiros. É 
+obrigatório acrescentar as coordenadas, mas podemos adicionar outras 
+informações adicionais, como, a cidade. 
+
+⚠️ **Atenção**! Se quisermos buscar algum aluno utilizando as suas 
+coordenadas temos que seguir um padrão, ele é em inglês. Então, ao em 
+vez de "coordanadas" usaremos `coordinates`. Além disso, temos que 
+falar qual o tipo de coordenada, nesse caso, é um mero ponto 
+(`type: point`):
+
+```js
+db.alunos.update(
+{ "_id" : ObjectId("56cb0139b6d75ec12f75d3b6") },
+{
+  $set : {
+    localizacao : {
+      endereco : "Rua Vergueiro, 3185",
+      cidade : "São Paulo",
+      coordinates : [-23.588213, -46.632356],
+      type : "Point"
+    }
+  }
+});
+ ```
+
+Vamos pedir ao Mongo para fazer uma pesquisa de proximidade geográfica, 
+ou seja, agregar os dados mais próximos e nos devolver o resultado. 
+Vamos utilizar o `aggregate`, para agregar um conjunto de dados. 
+Passaremos um dicionário que deve ter alguns parâmetros, o primeiro é 
+o tipo de busca que queremos fazer, como é uma **procura por proximidade** usaremos o `$geoNear`. O segundo parâmetro é o `near` que indica que 
+queremos aquilo que esteja próximo a uma coordenada específica. Por fim, passaremos também as `coordinates` (longitude e latitude) e o type que 
+no caso é `Point`. 
+
+Temos que dizer que ele deve realizar essa busca procurando o campo 
+**localização**. Então, temos que criar um índice de busca, o 
+`db.alunos.createIndex()` e nele passaremos que a chave localização 
+deve ser indexada para uma busca em uma **esfera 2d**, pois contam 
+apenas duas dimensões. Teremos o seguinte:
+
+```js
+db.alunos.aggregate([
+{
+  $geoNear : {
+    near : {
+      coordinates: [-23.5640265, -46.6527128],
+      type : "Point"
+    }
+
+  }
+}
+]);
+
+db.alunos.createIndex({
+  localizacao : "2dsphere"
+});
+```
+
+Agora, precisamos mostrar como calcular a distância entre esses dois 
+pontos. Teremos que falar ao $geoNear que a forma é `spherical: true`, 
+ou seja, que a comparação não deve ser entre as distâncias de uma linha, 
+e sim, de uma esfera. Além disso, temos que falar o que deve ser feito 
+com a distância, então, temos que criar o campo 
+`distanceField: "distance.calculada"`. Teremos o seguinte:
+
+```js
+db.alunos.aggregate([
+{
+  $geoNear : {
+    near : {
+      coordinates: [-23.5640265, -46.6527128],
+      type : "Point"
+    },
+    distanceField : "distancia.calculada",
+    spherical : true
+  }
+}
+]);
+
+db.alunos.createIndex({
+  localizacao : "2dsphere"
+});
+```
+
+Além disso, podemos pedir para que apenas 4 pontos sejam trazidos através 
+do `num: 3`. Agora que sabemos como buscar pontos vamos aprender a 
+ignorar o primeiro ponto que é o próprio aluno. Vamos adicionar ao 
+db.alunos.aggregate o `num: 4` e para pular um, `skip: 1`.
+
+```js
+// no final ele não mostra 4 elementos, mas sim 4 - 1
+db.alunos.aggregate([
+{
+  $geoNear : {
+    near : {
+      coordinates: [-23.5640265, -46.6527128],
+      type : "Point"
+    },
+    distanceField : "distancia.calculada",
+    spherical : true,
+    num: 4
+  }
+},
+{ $skip: 1 }
+]);
+```
+
+Vimos um exemplo de utilidade diferente do Mongo como a busca por 
+proximidade que pode ser utilizada para resolver problemas em um mapa.
+
+O MongoDB, entretanto, não se limita a busca de dados em uma esfera, 
+ele armazena diversos tipos de informação, validar dados, alterar 
+completamente um documento e etc.
 
 ## Comandos
 
 ```bash
-help # exibe principais comandos do Mongo Shell
-show dbs # lista todos os BDs do servidor mongod
-show collections # lista todas a coleções de um BD
-use <db_name> # conecta ao BD especificado
-rs.help() # exibe os comandos relacionado ao ReplicaSet
-sh.help() # exibe os comandos relacionado ao Sharding
+# exibe principais comandos do Mongo Shell
+help
+
+# lista todos os BDs do servidor mongod
+show dbs
+
+# lista todas a coleções de um BD
+show collections
+
+# conecta ao BD especificado
+use <db_name>
+
+# exibe os comandos relacionado ao ReplicaSet
+rs.help()
+
+# exibe os comandos relacionado ao Sharding
+sh.help() 
+
+# pede ao mongo para inserir um documento em Array em uma coleção
+mongoimport -c <collection_name> --jsonArray < <array_file>.json
 ```
 
 
@@ -253,5 +492,3 @@ distribuídas em servidores distintos;
 
 - **ReplicaSet** (Conjunto de Réplicas): é um grupo de servidores
 (mongod) que hospedam/armazenam o mesmo conjunto de dados;
-
-<h4 align="center">🚧 Readme em construção 👷🏻‍♀️</h4>
