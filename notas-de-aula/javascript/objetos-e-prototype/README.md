@@ -1,6 +1,6 @@
-# Objetos e o prototype em JavaScript
+# 🧩 Objetos e o prototype em JavaScript
 
-## O que é prototype?
+## 🧬 O que é prototype?
 
 É muito comum ouvirmos que o JS é uma linguagem baseada em protótipos e que tudo em JS é um objeto. Geralmente, trabalhamos com objetos literais, mas além disso, existe um outro tipo de objeto que o JS utiliza para que consigamos criar uma base para tudo que trabalhamos dentro da linguagem, sejam objetos, arrays, números etc.
 
@@ -12,7 +12,7 @@ Esse objeto oculto já traz com ele as próprias funções, então todos os mét
 
 Isso é um conceito importante para podermos avançar também nos estudos do JS. Esse protótipo nos permite trabalhar com o conceito de herança, ou seja, herdar atributos, propriedades, funções a partir do protótipo.
 
-## Propriedades de prototype
+## 🔧 Propriedades de prototype
 
 Criando um Cliente genérico:
 

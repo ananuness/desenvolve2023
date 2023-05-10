@@ -1,4 +1,4 @@
-# MongoDB: uma alternativa aos bancos relacionais tradicionais
+# 🍃 MongoDB: uma alternativa aos bancos relacionais tradicionais
 
 O [MongoDB](https://www.mongodb.com/what-is-mongodb) é um sistema de 
 gerenciamento de banco de dados (DBMS) não relacional, baseado em 
@@ -12,7 +12,21 @@ facilidade. Isso não apenas simplifica o gerenciamento do banco de
 dados para os desenvolvedores, como também cria um ambiente altamente 
 escalável para aplicativos e serviços multiplataforma.
 
-## Casos de uso
+## :notepad_spiral: Conteúdos
+
+- [Casos de uso](#🌐-casos-de-uso)
+  - [Aplicativos para dispositivos móveis](#aplicativos-para-dispositivos-móveis)
+  - [Análises em tempo real](#análises-em-tempo-real)
+  - [Sistemas de gerenciamento de conteúdo](#sistemas-de-gerenciamento-de-conteúdo)
+- [Comparativo com SQL](#🔄-comparativo-com-sql)
+- [Criando coleções e registros](#💾-criando-coleções-e-registros)
+- [Consultando e filtrando dados](#📊-consultando-e-filtrando-dados)
+- [Consultas com OR, AND e IN](#🧮-consultas-com-or-and-e-in)
+- [Atualização completa e parcial de documentos](#🗂️-atualização-completa-e-parcial-de-documentos)
+- [Buscando e limitando registros](#🔍-buscando-e-limitando-registros)
+- [Endereços, posicionamentos e busca por proximidade](#🧭-endereços-posicionamentos-e-busca-por-proximidade)
+
+## 🌐 Casos de uso
 
 ### Aplicativos para dispositivos móveis
 
@@ -46,7 +60,7 @@ um único banco de dados e com alta disponibilidade.
 
 Essas são apenas algumas de suas várias utilidades!
 
-### Comparativo com SQL
+## 🔄 Comparativo com SQL
 
 | MongoDB | SQL |
 | ------- | ---- |
@@ -54,7 +68,7 @@ Essas são apenas algumas de suas várias utilidades!
 | campos, chaves/valores | colunas |
 | coleções | tabelas |
 
-## Criando coleções e registros
+## 💾 Criando coleções e registros
 
 No MongoDB não trabalhamos com estruturas fixas como as tabelas, e sim 
 com as chamadas coleções, estas são as unidades básicas de dados. 
@@ -159,7 +173,7 @@ usar:
 - `.bulkWrite()` para executar várias operações de gravação com 
 controles para ordem de execução;
 
-## Consultando e filtrando dados
+## 📊 Consultando e filtrando dados
 
 Como já vimos, o `.find()` traz tudo o que está em determinada coleção,
 mas podemos precisar de algo mais específico, para isso, informamos
@@ -179,7 +193,7 @@ db.alunos.find({
 });
 ```
 
-## Consultas com OR, AND e IN
+## 🧮 Consultas com OR, AND e IN
 
 Fazer consultas no Mongo utilizando o `.find()` é super rico em
 possibilidades, por isso a [documentação](https://www.mongodb.com/docs/v3.0/reference/method/db.collection.find/)
@@ -222,7 +236,7 @@ db.alunos.find({
 });
 ```
 
-## Atualização completa e parcial de documentos
+## 🗂️ Atualização completa e parcial de documentos
 
 Para atualizar alguma informação, usamos o `.updateOne()`.
 
@@ -282,7 +296,7 @@ usar:
 - `.bulkWrite()` para executar várias operações de gravação com 
 controles para ordem de execução;
 
-## Buscando e limitando registros
+## 🔍 Buscando e limitando registros
 
 Outras operações que podemos fazer são as de comparação, uma delas é
 o 'maior que', *mas como fazer isso no Mongo?*
@@ -321,7 +335,7 @@ db.alunos.find().sort({ "nome": 1 });
 db.alunos.find().sort({ "nome": -1 });
 ```
 
-## Endereços, posicionamentos e busca por proximidade
+## 🧭 Endereços, posicionamentos e busca por proximidade
 
 Vamos imaginar que temos em nossa faculdade cerca de 2000 alunos e que 
 todos os dias eles se deslocam até o local de estudo. Muitos acabam indo 

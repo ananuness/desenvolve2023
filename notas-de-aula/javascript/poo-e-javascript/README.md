@@ -1,10 +1,10 @@
-# Programação orientada a objetos e JavaScript
+# 🗂️ Programação orientada a objetos e JavaScript
 
 ## :notepad_spiral: Conteúdos
 
-- [O que são paradigmas de programação?](#o-que-sao-paradigmas-de-programacao)
-- [Orientação à objetos](#orientacao-a-objetos)
-- [Orientação à objetos em JS](#orientacao-a-objetos-em-js)
+- [O que são paradigmas de programação?](#🧩-o-que-sao-paradigmas-de-programacao)
+- [Orientação à objetos](#🔗-orientacao-a-objetos)
+- [Orientação à objetos em JS](#🧬-orientacao-a-objetos-em-js)
   - [Entendendo o this](#entendendo-o-this)
   - [Fuction vs Arrow Function](#function-vs-arrow-function)
   - [Herança de protótipo](#heranca-de-prototipo)
@@ -16,10 +16,10 @@
   - [Encapsulamento](#encapsulamento)
   - [Polimorfismo](#polimorfismo)
   - [Interfaces](#interfaces)
-- [SOLID](#solid)
+- [SOLID](#🎯-solid)
 
 
-## O que são paradigmas de programação?
+## 🧩 O que são paradigmas de programação?
 
 Um paradigma de programação se baseia normalmente em alguma teoria matemática ou computacional ou os dois, desenvolvida para resolver determinados problemas de programação de determinada forma.
 Cada paradigma de programação tem o seu conjunto de regras e elas cobrem a forma como os dados são tratados, a organização do sistema, como o código é escrito, a arquitetura, entre vários outros aspectos. Existem mais de 20 paradigmas de programação estudados até hoje, e eles funcionam de forma isolada ou combinados uns com os outros.
@@ -73,7 +73,7 @@ SELECT * FROM alunos WHERE escola='Alura';
 
 O JavaScript e algumas outras linguagens podem utilizar mais de um paradigma. É comum ouvir o termo "*multiparadigma*" quando nos referimos a esse tipo de linguagem, e isso traz alguns benefícios, pois permite perfis diferentes de desenvolvedores e sistemas utilizarem uma linguagem em comum. Claro que um paradigma não é necessariamente melhor que o outro, mas dependendo das circunstâncias podemos utilizar um que seja mais otimizado para determinada aplicação. Algumas funcionalidades precisam alterar o estado de uma aplicação, não podendo ser escritas de forma declarativa, assim como os códigos declarativos que utilizamos podem ter uma implementação imperativa por baixo dos panos.
 
-## Orientação à objetos
+## 🔗 Orientação à objetos
 
 > "Princípio de espelhar o mundo real através de uma estrutura de objetos com características e ações que interagem uns com os outros."
 
@@ -89,7 +89,7 @@ Então na classe vamos definir as propriedades que identificamos do mundo real e
 
 Herança é um mecanismo que vai permitir que uma classe que definimos, herde características e comportamentos de uma outra classe, uma classe base. Logo, é um mecanismo importante que nos permite trabalhar com o conceito de reaproveitamento de código.
 
-## Orientação à objetos em JS
+## 🧬 Orientação à objetos em JS
 
 *"Mas por que eu preciso entender a herança de protótipo, que é uma coisa do JavaScript, se foi falado que de 2015 para cá foi implementado classe e podemos fazer tudo como classe, da forma que outras linguagens de programação fazem?"*
 
@@ -219,17 +219,34 @@ Outro detalhe é que todas as propriedades de uma cadeia de protótipos são enu
 
 ### Cópia vs referência
 
-Os métodos e propriedades não são copiados de um objeto para outro na cadeia de protótipos, eles são acessados pelo interpretador ao percorrer a cadeia e os métodos executados de acordo com o this, ou seja, o contexto em que o método foi executado.
+Os métodos e propriedades não são copiados de um objeto para outro na 
+cadeia de protótipos, eles são acessados pelo interpretador ao percorrer 
+a cadeia e os métodos executados de acordo com o this, ou seja, o 
+contexto em que o método foi executado.
 
 ### Object.create() vs new
 
-O **new** serve para criar instâncias de objetos através de funções construtoras (antes de ter sido introduzida a nomenclatura de classe). Já o `Object.create()` tem utilidade semelhante ao **new**, porém ele faz mais sentido no contexto de protótipo e o **new** no de classes. Na vida real, se for usar o modelo *prototype*, utilizamos Object.create criando objetos literais, passando objetos a partir de um modelo para outro.
+O **new** serve para criar instâncias de objetos através de funções 
+construtoras (antes de ter sido introduzida a nomenclatura de classe). 
+Já o `Object.create()` tem utilidade semelhante ao **new**, porém ele 
+faz mais sentido no contexto de protótipo e o **new** no de classes. 
+Na vida real, se for usar o modelo *prototype*, utilizamos 
+Object.create criando objetos literais, passando objetos a partir de 
+um modelo para outro.
 
 ### Estrutura de classe
 
-O `constructor()` é uma função especial que recebe, via parâmetros, as propriedades que um objeto precisa ter ao ser instanciado a partir de uma classe, também é através do construtor que uma classe herda métodos e propriedades da superclasse através da função `super()`. Porém, dependendo da necessidade do projeto, uma classe pode não ter um construtor, apenas métodos. Além disso, por debaixo dos panos, todas as classes seguem o modo estrito do js.
+O `constructor()` é uma função especial que recebe, via parâmetros, as propriedades que um objeto precisa ter ao ser instanciado a partir de 
+uma classe, também é através do construtor que uma classe herda métodos 
+e propriedades da superclasse através da função `super()`. Porém, 
+dependendo da necessidade do projeto, uma classe pode não ter um 
+construtor, apenas métodos. Além disso, por debaixo dos panos, todas 
+as classes seguem o modo estrito do js.
 
-Quando criamos uma classe, é possível designar que determinados métodos sejam estáticos. Ou seja, estes métodos não são inicializados quando criamos uma nova instância de classe (usando **new**), mas sim a partir da própria classe, por exemplo:
+Quando criamos uma classe, é possível designar que determinados métodos 
+sejam estáticos. Ou seja, estes métodos não são inicializados quando 
+criamos uma nova instância de classe (usando **new**), mas sim a partir 
+da própria classe, por exemplo:
 
 ```js
 class User {
@@ -245,7 +262,10 @@ class User {
 }
 ```
 
-No exemplo acima, o método `exibirInfos()` não é um método estático, e só é possível executá-lo a partir de uma instância da classe User, agora vamos refatorar a classe, declarando `exibirInfos()` como sendo um método estático:
+No exemplo acima, o método `exibirInfos()` não é um método estático, e 
+só é possível executá-lo a partir de uma instância da classe User, agora 
+vamos refatorar a classe, declarando `exibirInfos()` como sendo um 
+método estático:
 
 ```js
 class User {
@@ -267,19 +287,33 @@ Ao executarmos, recebemos o seguinte retorno:
 console.log(User.exibirInfos()) //undefined, undefined, undefined
 ```
 
-Agora, como o método depende de informações recebidas do construtor e isso não ocorreu (uma vez que não criamos uma instância e nem passamos os dados necessários), recebemos undefined para cada propriedade. Os métodos estáticos são normalmente utilizados para chamadas de métodos internos de frameworks e bibliotecas, ou em qualquer caso que a classe não dependa de instâncias específicas.
+Agora, como o método depende de informações recebidas do construtor e 
+isso não ocorreu (uma vez que não criamos uma instância e nem passamos 
+os dados necessários), recebemos `undefined` para cada propriedade. Os 
+métodos estáticos são normalmente utilizados para chamadas de métodos 
+internos de *frameworks* e bibliotecas, ou em qualquer caso que a classe 
+não dependa de instâncias específicas.
 
 ### Herança de classe
 
-A herança de classe é importante para um melhor reaproveitamento de código, uma vez que permite a criação de novas funcionalidades com base em um modelo. Além disso, faz com que os objetos e as regras de negócio criadas pelo sistema façam sentido e sejam de fácil abstração.
+A herança de classe é importante para um melhor reaproveitamento de 
+código, uma vez que permite a criação de novas funcionalidades com base 
+em um modelo. Além disso, faz com que os objetos e as regras de negócio 
+criadas pelo sistema façam sentido e sejam de fácil abstração.
 
 ### Encapsulamento
 
-Um dos princípios da Orientacao à objetos é a limitação do acesso direto aos dados, como os atributos e métodos de uma classe, para evitar usos inadequados desses dados.
+Um dos princípios da Orientacao à objetos é a limitação do acesso direto 
+aos dados, como os atributos e métodos de uma classe, para evitar usos inadequados desses dados.
 
 ### Polimorfismo
 
-Em relação ao polimorfismo, o principal conceito é a propriedade de duas ou mais classes derivadas de uma mesma superclasse responderem a mesma mensagem, cada uma de uma forma diferente. Ocorre quando uma subclasse redefine um método existente na superclasse, ou seja, quando temos os métodos sobrescritos (*overriding*), mesma assinatura, mas com funcionalidades diferentes.
+Em relação ao polimorfismo, o principal conceito é a propriedade de duas 
+ou mais classes derivadas de uma mesma superclasse responderem a mesma 
+mensagem, cada uma de uma forma diferente. Ocorre quando uma subclasse 
+redefine um método existente na superclasse, ou seja, quando temos os 
+métodos sobrescritos (*overriding*), mesma assinatura, mas com 
+funcionalidades diferentes.
 
 ### Interfaces
 
@@ -293,7 +327,7 @@ Interface então é uma estrutura que define um contrato na sua aplicação, e a
 
 A interface é construída por meio da checagem de tipos, que são as conhecidas *duck typing* (tipagem pato) ou a *structural subtyping* (subtipagem estrutural). Traduzindo isso para programação, não nos interessa o tipo do objeto, mas sim o que o objeto consegue fazer, ou seja, se ele tem determinados métodos e propriedades.
 
-## SOLID
+## 🧰 SOLID
 
 É um conjunto de *design patterns* desenvolvido para OO:
 
