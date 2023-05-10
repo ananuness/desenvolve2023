@@ -1,4 +1,4 @@
-# 🗂️ Programação orientada a objetos e JavaScript
+# 🗂️ Programação orientada à objetos e JavaScript
 
 ## :notepad_spiral: Conteúdos
 
