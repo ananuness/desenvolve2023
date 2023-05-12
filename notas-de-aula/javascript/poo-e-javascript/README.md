@@ -1,10 +1,10 @@
 # 🗂️ Programação orientada à objetos e JavaScript
 
-## :notepad_spiral: Conteúdos
+## Conteúdos
 
-- [O que são paradigmas de programação?](#🧩-o-que-sao-paradigmas-de-programacao)
+- [O que são paradigmas de programação?](#o-que-sao-paradigmas-de-programacao)
 - [Orientação à objetos](#🔗-orientacao-a-objetos)
-- [Orientação à objetos em JS](#🧬-orientacao-a-objetos-em-js)
+- [Orientação à objetos em JS](#orientacao-a-objetos-em-js)
   - [Entendendo o this](#entendendo-o-this)
   - [Fuction vs Arrow Function](#function-vs-arrow-function)
   - [Herança de protótipo](#heranca-de-prototipo)
@@ -16,10 +16,10 @@
   - [Encapsulamento](#encapsulamento)
   - [Polimorfismo](#polimorfismo)
   - [Interfaces](#interfaces)
-- [SOLID](#🎯-solid)
+- [SOLID](#solid)
 
 
-## 🧩 O que são paradigmas de programação?
+## O que são paradigmas de programação?
 
 Um paradigma de programação se baseia normalmente em alguma teoria matemática ou computacional ou os dois, desenvolvida para resolver determinados problemas de programação de determinada forma.
 Cada paradigma de programação tem o seu conjunto de regras e elas cobrem a forma como os dados são tratados, a organização do sistema, como o código é escrito, a arquitetura, entre vários outros aspectos. Existem mais de 20 paradigmas de programação estudados até hoje, e eles funcionam de forma isolada ou combinados uns com os outros.
@@ -73,7 +73,7 @@ SELECT * FROM alunos WHERE escola='Alura';
 
 O JavaScript e algumas outras linguagens podem utilizar mais de um paradigma. É comum ouvir o termo "*multiparadigma*" quando nos referimos a esse tipo de linguagem, e isso traz alguns benefícios, pois permite perfis diferentes de desenvolvedores e sistemas utilizarem uma linguagem em comum. Claro que um paradigma não é necessariamente melhor que o outro, mas dependendo das circunstâncias podemos utilizar um que seja mais otimizado para determinada aplicação. Algumas funcionalidades precisam alterar o estado de uma aplicação, não podendo ser escritas de forma declarativa, assim como os códigos declarativos que utilizamos podem ter uma implementação imperativa por baixo dos panos.
 
-## 🔗 Orientação à objetos
+## Orientação à objetos
 
 > "Princípio de espelhar o mundo real através de uma estrutura de objetos com características e ações que interagem uns com os outros."
 
@@ -89,7 +89,7 @@ Então na classe vamos definir as propriedades que identificamos do mundo real e
 
 Herança é um mecanismo que vai permitir que uma classe que definimos, herde características e comportamentos de uma outra classe, uma classe base. Logo, é um mecanismo importante que nos permite trabalhar com o conceito de reaproveitamento de código.
 
-## 🧬 Orientação à objetos em JS
+## Orientação à objetos em JS
 
 *"Mas por que eu preciso entender a herança de protótipo, que é uma coisa do JavaScript, se foi falado que de 2015 para cá foi implementado classe e podemos fazer tudo como classe, da forma que outras linguagens de programação fazem?"*
 
@@ -157,7 +157,6 @@ Em um primeiro momento, todas as três formas de criação de função parecem f
 A primeira diferença entre a declaração de função e as expressões de função é o *hoisting*. Mas, além do *hoisting*, existe outra diferença principal entre declaração de função e *arrow function*: ao contrário das funções normais, *arrow functions* herdam automaticamente o contexto de onde foram criadas e não têm seu próprio “contexto de invocação”. Ou seja, não podem ser ligadas a contextos específicos com this e nem fazer uso dos métodos `bind()`, `call()` e `apply()`. 
 
 *Arrow functions* também não possuem a propriedade *prototype* e por isso não podem ser usadas como funções construtoras - assunto que veremos em seguida.
-
 
 ### Herança de protótipo
 
@@ -327,7 +326,7 @@ Interface então é uma estrutura que define um contrato na sua aplicação, e a
 
 A interface é construída por meio da checagem de tipos, que são as conhecidas *duck typing* (tipagem pato) ou a *structural subtyping* (subtipagem estrutural). Traduzindo isso para programação, não nos interessa o tipo do objeto, mas sim o que o objeto consegue fazer, ou seja, se ele tem determinados métodos e propriedades.
 
-## 🧰 SOLID
+## SOLID
 
 É um conjunto de *design patterns* desenvolvido para OO:
 

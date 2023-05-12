@@ -1,13 +1,5 @@
 # ⚙️ Node.js
 
-## :notepad_spiral: Conteúdos
-
-- [O que é o Node.js?](#📚-o-que-é-o-nodejs)
-- [Para que é usado?](#💻-para-que-é-usado)
-- [Node.js vs JavaScript](#🤝-nodejs-vs-javascript)
-- [O package.json](#📦-o-packagejson)
-- [O npm/yarn](#📤-o-npmyarn)
-
 ## 📚 O que é o Node.js?
 
 O JavaScript é uma linguagem interpretada, ou seja, ela precisa de um

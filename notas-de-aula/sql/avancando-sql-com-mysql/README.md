@@ -4,8 +4,8 @@ O principal objetivo da linguagem SQL é padronizar a maneira como os registros 
 
 ## Conteúdos 
 
-- [Vantagens](#chat_with_upwards_trend-vantagens)
-- [Desvantagens](#chat_with_downwards_trend-desvantagens)
+- [Vantagens](#chart_with_upwards_trend-vantagens)
+- [Desvantagens](#chart_with_downwards_trend-desvantagens)
 - [Comandos](#clipboard-comandos)
   - [LIKE](#like)
   - [DISTINCT](#distinct)
