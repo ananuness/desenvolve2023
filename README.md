@@ -20,6 +20,7 @@ Categoria | Anotações |
 | JavaScript | [Módulos e strict mode](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript/modulos-e-strict-mode) |
 | JavaScript | [Objetos e prototype](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript/objetos-e-prototype) |
 | JavaScript | [Programação orientada à objetos e JavaScript](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript/poo-e-javascript) |
+| JavaScript | [Node.js](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript/node) |
 | SQL  | [MongoDB: uma alternativa aos bancos relacionais tradicionais](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/nosql/introducao-ao-mongodb) |
 | SQL  | [Consultas SQL: avançando no SQL com MySQL](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/sql/avancando-sql-com-mysql) |
 | UI Design | [Figma: construindo o layout do site mobile](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/ui-ux-design/1-construindo-layout-mobile) |
