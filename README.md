@@ -37,6 +37,7 @@ Categoria | Anotações |
 | UI Design | [Design Diário](https://www.figma.com/file/zg2upbaEV1TRGgJDryU65e/Design-Di%C3%A1rio?node-id=153%3A4118&t=La2c5fsB6zZbHcf0-1) | Figma |
 | Frontend | [Barbearia Alura](https://github.com/ananuness/barbearia-alura) | HTML, CSS, JS |
 | Frontend | [Step Form](https://github.com/ananuness/step-form) | HTML, CSS, JS |
+| Backend | [Library API](https://github.com/ananuness/library-api) | Node.js (Express), MongoDB |
 
 <h4 align="center">🚧 Readme em construção 👷🏻‍♀️</h4>
 
