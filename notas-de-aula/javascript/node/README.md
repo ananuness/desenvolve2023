@@ -31,8 +31,8 @@ vários outros usos.
 No JS, basicamente tudo da linguagem, todas suas funcionalidades,
 bibliotecas nativas etc, é interpretado no "motor de interpretação", o
 navegador. E cada um desenvolve e mantém sua *engine* de uma maneira
-diferente. A **V8** roda na Google; a SpiderMonkey na Firefox e o Chromium
-na Microsoft Edge.
+diferente. A **V8** roda na Google; a SpiderMonkey na Firefox e o 
+Chromium na Microsoft Edge.
 
 Então, por exemplo, o método `.sort()` pode ser usado em qualquer uma
 das engines, porém, a forma que o algoritmo é implementado, pode variar
@@ -45,7 +45,7 @@ pelo foco ser o desenvolvimento backend.
 
 > **Curiosidade:** podemos usar o Node para desenvolver aplicações 
 > inteiras, como o editor de código Atom, o "whatsapp empresarial" 
-> Slack e o Postman, que é uma ferramenta que dá suporte à  documentação, 
+> Slack e o Postman, que é uma ferramenta que dá suporte à documentação, 
 > execução de testes de APIs e requisições em geral. 
 
 Em resumo, a linguagem ainda é a mesma, ✨ JavaScript ✨ (pode ser
@@ -58,15 +58,16 @@ suas semelhanças.
 ## 📦 O package.json
 
 O arquivo `package.json` é o coração, o *arquivo manifesto* de qualquer
-projeto que utilize o Node. É nele que você encontra todas as informações
-principais sobre o projeto:
+projeto que utilize o Node. É nele que você encontra todos os metadados
+importantes sobre o projeto:
 
 - nome do projeto;
 - descrição do projeto;
 - versão do projeto;
 - dependências;
 - o arquivo que é o ponto de entrada do seu projeto;
-- scripts (comandos que podemos configurar) e dentre outras informações;
+- scripts (forma de automatizar tarefas através de comandos 
+configuráveis mais práticos) e dentre outras informações;
 
 ## 📤 O npm/yarn
 
@@ -77,8 +78,19 @@ até os frameworks mais completos que podem ser usados com Node. E através
 deles, conseguimos instalar pacotes localmente para usarmos no nosso 
 projeto e todos eles ficam localizados na pasta `node_modules` e essas
 dependências instaladas são listadas de maneira mais detalhada em outro 
-arquivo, o `package_lock.json`, que é gerado automaticamente.
+arquivo, o `package-lock.json`, que é gerado automaticamente.
 
 O npm já vem instalado junto com o Node.js, porém, a partir dele,
 conseguimos instalar o yarn, que é outro gerenciador, com comandos um
 pouco diferentes, mas na maior parte desempenham a mesma função.
+
+A maior motivação para escolherem o yarn, foi o arquivo `.lock`, que é
+responsável por fazer o "travamento" das versões dos pacotes que
+instalamos. Um problema que se tinha com o npm era quando fazíamos a
+instalação dos pacotes: caso outro desenvolvedor fosse fazer esse
+processo, não era garantido que a versão baixada por ele seria a
+mesma originalmente instalada. 
+
+E por fim, a velocidade na instalação dos pacotes devido a uso de cache
+que funciona muito bem. Porém, atualmente, ambos funcionam super bem,
+então não é uma diferença gritante.
