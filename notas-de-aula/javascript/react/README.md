@@ -9,7 +9,6 @@
     - [Componentes](#componentes)
   - [Por que usar React?](#por-que-usar-react)
 - [Compilers e Bundlers](#compilers-e-bundlers)
-- [Estrutura de um projeto React (Vite)](#estrutura-de-um-projeto-react-vite)
 
 ## Library vs Framework
 
@@ -150,6 +149,8 @@ Timeline não irá saber, não terá nenhum efeito colateral.
 em qualquer lugar. Fazendo referência à possibilidade de desenvolver
 aplicações web, mobile e desktop.
 
+E para saber mais, visite a documentação do [React](https://react.dev/learn)!
+
 ## Compilers e Bundlers
 
 O JavaScript é uma linguagem que depois de 2015 evoluiu muito, e por
@@ -182,45 +183,3 @@ comparativo bacana, recomendo a leitura desse
 E sobre o que o Next.js usa, confira a documentação sobre o 
 [SWC](https://nextjs.org/docs/architecture/nextjs-compiler) e o
 [Turbopack](https://nextjs.org/docs/architecture/turbopack).
-
-## Estrutura de um projeto React ([Vite](https://vitejs.dev/))
-
-O Vite é uma das novas maneiras de criar nosso setup para projetos 
-react, como ainda não utilizo o Next agora iremos falar um pouco sobre 
-a estrutura inicial do projeto, oferecida pelo Vite:
-
-- `./public/`: nesta pasta ficam os arquivos públicos, geralmente 
-aqueles que precisam ficar publicamente visíveis na nossa aplicação,
-como imagens, fontes, favicons, assets em geral;
-
-- `./src/`: pasta que contém de fato o código da aplicação;
-
-- `./index.html`: é o arquivo principal do projeto, em que todo o 
-código desenvolvido na pasta *src* é injetado pelo React.
-
-- `./src/main.[jsx, tsx]`: esse arquivo é responsável por inserir no
-`./index.html` o código do projeto. Através das importações do React e
-do ReactDOM (basicamente o *port* do React para funcionar na web),
-utilizamos um método chamado `.createRoot()`, que é utilizado apenas
-uma vez em toda aplicação, aceitando um parâmetro informando qual
-elemento HTML irá receber o código gerado pelo projeto React, em
-seguida, chama-se o método `.render()`, para informar o que queremos
-renderizar, ou seja, mostrar em tela, e é passado como parâmetro o que
-queremos injetar dentro o elemento informado antes desse render. E por
-fim, a tag *React.StrictMode* é uma recomendação do React para avisar
-para o desenvolvedor, possíveis erros dentro do código gerado.
-
-```tsx
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-
-// mostrando em tela, dentro do elemento 
-// com id 'root' o conteúdo informado
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <h1>Hello World!</h1>
-  </React.StrictMode>,
-)
-```
-
-> Exceto as pastas citadas, ficam arquivos de configuração.
