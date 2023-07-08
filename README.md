@@ -40,6 +40,7 @@ Categoria | Anotações |
 | Frontend | [Barbearia Alura](https://github.com/ananuness/barbearia-alura) | HTML, CSS, JS |
 | Frontend | [Step Form](https://github.com/ananuness/step-form) | HTML, CSS, JS |
 | Backend | [Library API](https://github.com/ananuness/library-api) | Node.js (Express), MongoDB |
+| Frontend | [React TDD](https://github.com/ananuness/react-tdd) | TypeScript, React |
 
 <h4 align="center">🚧 Readme em construção 👷🏻‍♀️</h4>
 
