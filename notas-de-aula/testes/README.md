@@ -100,3 +100,54 @@ processos, estabelecendo como podem ter melhorias para os próximos
 ciclos e toda essa parte que vai lidar diretamente com a implementação, 
 tanto do código em si do projeto quanto da implementação dos testes e 
 tudo que aconteceu em torno disso.
+
+## Ambiente de Testes
+
+O que exatamente é esse tal ambiente?
+
+>O ambiente de testes é o conjunto formado pelo programa, as configurações 
+> (hardware, redes, servidores, dispositivos, etc) e os dados 
+> necessários para que os testes sejam executados.
+
+A proposta do ambiente de testes é verificar todos os componentes de um 
+sistema nas condições mais próximas possíveis das condições de uso real 
+pelos usuários, para que possíveis bugs e erros de implementação possam 
+ser corrigidos antes que o programa ou funcionalidade seja disponibilizado 
+- o tal “ambiente de produção”.
+
+Vamos ver de forma resumida o que é cada um destes ambientes:
+
+### Desenvolvimento
+
+É o ambiente onde o programa é desenvolvido - como o próprio nome diz. 
+Desenvolver aqui pode tanto se referir ao desenvolvimento de algo do 
+zero (por exemplo, uma funcionalidade) como a atualizações de partes 
+de um programa que já existem. Neste momento, já são efetuados diversos 
+testes como os **unitários** e de **integração**.
+
+### Testes
+
+Como o código que está em desenvolvimento está sempre sendo atualizado, 
+é normal que testes mais complexos e que levem mais tempo para serem 
+implementados, por exemplo os testes **E2E** (end to end ou “ponta a ponta”) 
+estejam em um ambiente separado do de desenvolvimento, utilizado muitas 
+vezes pelas pessoas que chamamos de QAs (de quality assurance ou 
+“garantia de qualidade”) ou testers.
+
+Neste momento são testadas e avaliadas várias partes do programa, como 
+a integração com outras partes do sistema, comportamento com o banco, 
+performance das tarefas, etc.
+
+### Staging
+
+O último estágio antes da produção, onde o time procura “imitar” o 
+ambiente de produção da forma mais fiel possível, para últimos testes 
+como os de **desempenho**, **stress** e **carga**.
+
+### Produção
+
+É o ambiente onde o código “final” está rodando e por onde ele é 
+acessado e utilizado pelos usuários reais do produto. Mesmo neste 
+estágio os times ainda observam e monitoram o comportamento do 
+programa em busca de possíveis bugs e/ou comportamentos não esperados; 
+ou seja, os testes continuam acontecendo.
