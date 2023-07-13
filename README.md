@@ -23,6 +23,7 @@ Categoria | Anotações |
 | JavaScript | [Node.js](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript/node) |
 | JavaScript | [Node.js e Assincronicidade](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript/node-e-assincronicidade) |
 | JavaScript | [React](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/javascript/react) |
+| HTTP | [HTTP: Entendendo a web por debaixo dos panos](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/http) |
 | Programação | [API (Application Programming Interface)](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/api/introducao) |
 | NoSQL  | [MongoDB: uma alternativa aos bancos relacionais tradicionais](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/nosql/introducao-ao-mongodb) |
 | SQL  | [Consultas SQL: avançando no SQL com MySQL](https://github.com/ananuness/desenvolve2023/tree/main/notas-de-aula/sql/avancando-sql-com-mysql) |
