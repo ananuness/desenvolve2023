@@ -151,3 +151,22 @@ acessado e utilizado pelos usuários reais do produto. Mesmo neste
 estágio os times ainda observam e monitoram o comportamento do 
 programa em busca de possíveis bugs e/ou comportamentos não esperados; 
 ou seja, os testes continuam acontecendo.
+
+## Hooks
+
+Alguns métodos do Jest, estudados em aula, controlavam eventos em 
+alguns momentos específicos, como antes de cada teste acontecer ou 
+após todos os testes. Chamamos este tipo de função de *hook* (algo como 
+“gancho” em português).
+
+As funções hook não são exclusivas do Jest ou mesmo do JavaScript, e 
+sim um conceito utilizado em programação no geral. Chamamos de hook 
+uma função ou método que é chamado quando queremos dar ao programa um 
+comportamento específico em alguma determinada circunstância - por 
+exemplo, antes, durante ou depois de determinado código ser executado.
+
+Assim, os exemplos usados, `beforeEach()` e `afterEach()` são 
+consideradas funções hooks, pois são executadas em determinados 
+momentos/eventos que ocorrem no código e permitem que o comportamento 
+do programa “reaja” à estes eventos, alterando o código que será 
+executado ou executando algum específico.
